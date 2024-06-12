@@ -3,7 +3,7 @@
       <div class="task">
         <!-- title -->
         <div class="title">
-          <h1> To Do List</h1>
+          <h1 class="text-8xl bg-red-800"> To Do List</h1>
         </div>
         <!-- form -->
         <div class="form">
@@ -57,7 +57,7 @@
     components: {
       
     },
-    data() {
+    data(){
       return {
         task:'',
         newTask: "",
@@ -137,6 +137,15 @@
     
 
     },
+    watch:{
+      tasks(newVal, OldVal) {
+        console.log("Task changed => ", newVal)
+        console.log("Task changed OldVal => ", OldVal)
+      },
+      isDone(){
+
+      }
+    }
   };
   </script>
   
